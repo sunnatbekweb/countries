@@ -24,8 +24,8 @@
     <!-- Header start -->
     <header class="w-full h-20 flex items-center fixed top-0">
         <div class="container mx-auto">
-            <div class="header_w flex items-center justify-between">
-                <h1 class="text-[#111517] text-2xl font-extrabold">Where in the world?</h1>
+            <div class="header_w flex items-center justify-between mx-8">
+                <h1 class="text-[#111517] text-lg md:text-2xl font-extrabold">Where in the world?</h1>
 
                 <div
                     class="w-[480px] h-[56px] px-8 py-[19px] shadow items-center gap-6 border-radius-[5px] hidden lg:flex">
@@ -33,7 +33,7 @@
                     <input type="search" placeholder="Enter country name" class="focus:outline-none w-[380px]">
                 </div>
 
-                <button class="flex items-center gap-2 text-lg text-black"><i class="bi bi-moon-fill fons"></i> Dark
+                <button class="flex items-center gap-2 text-xs md:text-lg text-black"><i class="bi bi-moon-fill fons"></i> Dark
                     Mode</button>
             </div>
         </div>
@@ -45,21 +45,14 @@
     <main class="mt-20">
         <section id="countries" class="py-12">
             <div class="container mx-auto px-5">
-                <div class="flex justify-between items-center">
-                    <i class="bi bi-search md:hidden"></i>
-
-                    <div class="w-[480px] h-[56px] px-8 py-[19px] shadow items-center gap-6 border-radius-[5px] hidden md:flex">
+                <div class="flex flex-wrap md:justify-between md:items-center">
+                    <div class="w-[480px] h-[56px] flex px-8 py-[19px] shadow items-center gap-6 border-radius-[5px]">
                         <i class="bi bi-search"></i>
                         <input type="search" placeholder="Enter country name" class="focus:outline-none">
                     </div>
 
-                    <select id="filter" class="w-[200px] h-[56px] shadow cursor-pointer">
-                        <option value="1" selected disabled>Filter by Region</option>
-                        <option value="2">Africa</option>
-                        <option value="3">America</option>
-                        <option value="4">Asia</option>
-                        <option value="5">Europe</option>
-                        <option value="6">Oceania</option>
+                    <select id="filter" class="w-[200px] h-fit py-4 px-6 shadow cursor-pointer mt-10 mb-8 md:m-0">
+                        <option value="0" selected disabled>Filter by region</option>
                     </select>
                 </div>
 
