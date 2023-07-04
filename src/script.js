@@ -7,6 +7,8 @@ const renderToHTML = () => {
         const element = document.createElement('div')
         element.classList.add("card")
         element.classList.add('shadow')
+        element.classList.add("overflow-hidden")
+        element.classList.add("rounded")
 
         element.innerHTML = `
         <img src="${data.flags.svg}" class="w-full h-[160px]">
