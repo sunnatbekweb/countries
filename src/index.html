@@ -16,25 +16,32 @@
     <!-- Styles -->
     <link rel="stylesheet" href="../src/input.css">
     <link rel="stylesheet" href="./dist/output.css">
+    <!-- Script for icons -->
+    <script src="https://kit.fontawesome.com/d6a8ce8d77.js" crossorigin="anonymous"></script>
     <!-- Title -->
     <title>Countries</title>
 </head>
 
-<body>
+<body class="bg-white dark:bg-[#202C36] transition-all">
     <!-- Header start -->
-    <header class="w-full h-20 flex items-center fixed top-0">
+    <header class="w-full h-20 flex items-center fixed top-0 bg-white dark:bg-[#2B3844] transition-all">
         <div class="container mx-auto">
             <div class="header_w flex items-center justify-between mx-8">
-                <h1 class="text-[#111517] text-lg md:text-2xl font-extrabold">Where in the world?</h1>
+                <h1 class="text-[#111517] text-lg md:text-2xl font-extrabold dark:text-white">Where in the world?</h1>
 
-                <div
-                    class="w-[480px] h-[56px] px-8 py-[19px] shadow items-center gap-6 border-radius-[5px] hidden">
+                <div class="w-[480px] h-[56px] px-8 py-[19px] shadow items-center gap-6 border-radius-[5px] hidden">
                     <i class="bi bi-search"></i>
                     <input type="search" placeholder="Enter country name" class="focus:outline-none w-full">
                 </div>
 
-                <button class="flex items-center gap-2 text-xs md:text-lg text-black"><i class="bi bi-moon-fill fons"></i> Dark
-                    Mode</button>
+                <div class="dark_toggle">
+                    <input type="checkbox" id="check" class="checkbox" />
+                    <label for="chk" class="label">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
             </div>
         </div>
     </header>
@@ -42,17 +49,19 @@
     <!-- Header end -->
 
     <!-- Main start -->
-    
+
     <main class="mt-20">
         <section id="countries" class="py-12">
             <div class="container mx-auto px-5">
                 <div class="flex flex-wrap md:justify-between md:items-center">
-                    <div class="w-[480px] h-[56px] flex px-8 py-[19px] shadow items-center gap-6 border border-radius-[5px]">
-                        <i class="bi bi-search"></i>
-                        <input type="search" placeholder="Enter country name" class="focus:outline-none w-full" id="search_country">
+                    <div
+                        class="search transition-all w-[480px] h-[56px] flex px-8 py-[19px] shadow items-center gap-6 border border-radius-[5px] bg-white dark:bg-[#2B3844] dark:text-white dark:border-[#2B3844]">
+                        <i class="bi bi-search text-[#111517] dark:text-white"></i>
+                        <input type="search" placeholder="Enter country name" class="focus:outline-none transition-all w-full bg-white dark:bg-[#2B3844]"
+                            id="search_country">
                     </div>
 
-                    <select id="filter" class="w-[200px] h-fit py-4 px-6 shadow cursor-pointer mt-10 mb-8 md:m-0">
+                    <select id="filter" class="transition-all w-[200px] h-fit py-4 px-6 shadow cursor-pointer mt-10 mb-8 md:m-0 text-[#111517] dark:text-white bg-white dark:bg-[#2B3844]">
                         <option value="0" selected disabled>Filter by region</option>
                     </select>
                 </div>
