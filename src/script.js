@@ -2,12 +2,13 @@
 
 const wrapper = document.querySelector(".wrapper")
 const filter = document.getElementById("filter")
+const search = document.querySelector("#search_country")
 
 const renderToHTML = (arr) => {
     let res = "";
     arr.map((data) => {
         res += `
-            <div class="">
+            <div class="border">
                 <img src="${data.flags.svg}" class="w-full h-[160px]">
                 <div class="px-6 pt-6 pb-12">
                     <h1 class="mb-4 text-[#111517] text-[18px] font-extrabold">${data.name}</h1>
@@ -40,4 +41,9 @@ regions.map((v) => {
 filter.addEventListener("input", (e) => {
     let res = countries.filter((v) => v.region === e.target.value);
     renderToHTML(res)
+})
+
+search.addEventListener("input", (e) => {
+    let result = countries.filter((v) => v.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()));
+    renderToHTML(result)
 })
