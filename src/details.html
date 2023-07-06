@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Icon -->
+    <!-- FavIcon -->
     <link rel="icon" href="./assets/icons/earth.png">
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -15,15 +14,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="../src/input.css">
-    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="./dist/output.css">
     <!-- Script for icons -->
     <script src="https://kit.fontawesome.com/d6a8ce8d77.js" crossorigin="anonymous"></script>
     <!-- Title -->
-    <title>Countries</title>
+    <title>Details</title>
 </head>
 
-<body class="bg-white dark:bg-[#202C36] transition-all">
+<body class="bg-white text-[#111517] dark:bg-[#202C36] dark:text-white transition-all">
     <!-- Header start -->
+
     <header class="w-full h-20 flex items-center fixed top-0 bg-white dark:bg-[#2B3844] transition-all">
         <div class="container mx-auto">
             <div class="header_w flex items-center justify-between mx-8">
@@ -51,23 +51,15 @@
     <!-- Main start -->
 
     <main class="mt-20">
-        <section id="countries" class="py-12">
+        <section id="details" class="w-full min-h-[880px]">
             <div class="container mx-auto px-5">
-                <div class="flex flex-wrap md:justify-between md:items-center">
-                    <div
-                        class="search transition-all w-[480px] h-[56px] flex px-8 py-[19px] shadow items-center gap-6 border border-radius-[5px] bg-white dark:bg-[#2B3844] dark:text-white dark:border-[#2B3844]">
-                        <i class="bi bi-search text-[#111517] dark:text-white"></i>
-                        <input type="search" placeholder="Enter country name" class="focus:outline-none transition-all w-full bg-white dark:bg-[#2B3844]"
-                            id="search_country">
+                <div class="details_weapper h-[880px] flex flex-col pt-[100px]">
+                    <a href="index.html" class="px-10 py-3 shadow mb-20 flex gap-[10px] w-[140px] bg-white dark:bg-[#2B3844]"><i
+                            class="bi bi-arrow-left"></i> Back</a>
+
+                    <div class="wrapper2 flex flex-wrap lg:grid lg:place-content-center 2xl:flex 2xl:justify-between items-center shadow-xl border dark:border-[#2B3844] dark:bg-[#2b3844] p-[30px]">
+                        
                     </div>
-
-                    <select id="filter" class="transition-all w-[200px] h-fit py-4 px-6 shadow cursor-pointer mt-10 mb-8 md:m-0 text-[#111517] dark:text-white bg-white dark:bg-[#2B3844]">
-                        <option value="0" selected disabled>Filter by region</option>
-                    </select>
-                </div>
-
-                <div
-                    class="wrapper mt-12 grid sm:grid-cols-1 sm:px-14 sm:gap-12 sm:place-content-center md:grid-cols-2 md:gap-12 lg:grid-cols-3 lg:gap-12 xl:grid-cols-4 xl:gap-16">
                 </div>
             </div>
         </section>
@@ -75,9 +67,10 @@
 
     <!-- Main end -->
 
+    <!-- Scripts -->
     <script src="./country.js"></script>
     <script src="./utils.js"></script>
-    <script src="./script.js"></script>
+    <script src="./details_script.js"></script>
 </body>
 
 </html>
